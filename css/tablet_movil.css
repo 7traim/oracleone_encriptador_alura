@@ -1,0 +1,350 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1009%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(246%2c 246%2c 246%2c 1)'%3e%3c/rect%3e%3cpath d='M307.21 28.37 a119.01 119.01 0 1 0 238.02 0 a119.01 119.01 0 1 0 -238.02 0z' fill='rgba(57%2c 172%2c 146%2c 0.5)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1068.57 444.02 a117.33 117.33 0 1 0 234.66 0 a117.33 117.33 0 1 0 -234.66 0z' fill='rgba(57%2c 172%2c 146%2c 0.5)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M983.18 529.23 a111.65 111.65 0 1 0 223.3 0 a111.65 111.65 0 1 0 -223.3 0z' fill='rgba(57%2c 172%2c 146%2c 0.5)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1080.79 200.93 a114.01 114.01 0 1 0 228.02 0 a114.01 114.01 0 1 0 -228.02 0z' fill='rgba(57%2c 172%2c 146%2c 0.5)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M795.61 270.76 a152.53 152.53 0 1 0 305.06 0 a152.53 152.53 0 1 0 -305.06 0z' fill='rgba(57%2c 172%2c 146%2c 0.5)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-61.81 252.92 a185.54 185.54 0 1 0 371.08 0 a185.54 185.54 0 1 0 -371.08 0z' fill='rgba(57%2c 172%2c 146%2c 0.5)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M278.98 444.04 a184.37 184.37 0 1 0 368.74 0 a184.37 184.37 0 1 0 -368.74 0z' fill='rgba(57%2c 172%2c 146%2c 0.5)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1009'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+} 
+
+/*DISEÑO CONTENEDOR PRINCIPAL*/
+
+.container_principal{
+    background-color: #f6f6f6;
+    border-radius: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    max-width: 90%;
+    min-height: 100rem;
+    top: 3rem;
+}
+
+/*DISEÑO SECTION*/
+
+.container{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    top: 0rem;
+    transition: all 0.6s ease-in-out;
+    background: #f6f6f6;
+    
+}
+
+/*DISEÑO AREA INPUT*/
+
+.area_input{
+    width: 100%;
+    height: 50%;
+    background: #ffffff;
+    z-index: 2;
+    border-radius: 2.5rem;
+    border: 3px solid #39ac92;
+   
+}
+
+.text-area{
+    position: absolute;
+    background: transparent;
+    color: black;
+    width: 95%;
+    top: 2rem;
+    left: 1rem;
+    height: 75%;
+    border: none;
+    text-transform: lowercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 2.5rem;
+    resize: none;
+}
+
+::placeholder{
+    color: #39ac92;
+    font-size: 2rem;
+    font-family: 'PT Sans Narrow', sans-serif; 
+}
+.text-area:focus{
+    outline: none;
+}
+
+.btnpegar{
+    position: relative;
+    bottom: 30rem;
+    right: 15rem;
+}
+
+#pasteButton{
+    position: absolute;
+    top: 6rem;
+    left: 5rem;
+    background: #ffffff;
+    border: 2px solid #09493a;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-family: 'PT Sans Narrow', sans-serif;
+ }
+
+
+.input_nota{
+    width: 70%;
+    position: absolute;
+    left: 3rem;
+    display: inline-flex;
+    bottom: 8rem;
+    cursor: pointer;
+}
+.input_nota a img{
+    margin-top: 0.1rem;
+}
+
+
+.input_nota p{
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.input_bottons{
+    width: 100%;
+    height: 6rem;
+    position: absolute; 
+    display: flex;
+    bottom: 2rem;  
+    left: 0;
+    justify-content: space-around;
+}
+
+.input_bottons button{
+    border-radius: 3rem;
+    border: none;
+    width: 22rem;
+    height: 5.5rem;
+    font-size: 2.5rem;
+    background-image: linear-gradient(to left, #6fb1a0, #6fb1a0, #39ac92);
+    color: white;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.input_bottons button:hover{
+    background: #f6f6f6;
+    color: #39ac92;
+    font-weight: bold;
+    border: 3px solid #39ac92;
+}
+
+
+/*DISEÑO AREA OUTPUT*/
+.area_output{
+    background: #39ac92;
+    width: 100%;
+    height: 50%;
+    opacity: 0.8;
+    top: 53rem;
+    border-radius: 2.5rem;
+}
+
+.text-result{
+    position: absolute;
+    width: 95%;
+    left: 1rem;
+    top: 2rem;
+    height: 80%;
+    border: none;
+    background: transparent;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    resize: none;
+    text-transform: lowercase
+    
+}
+
+.text-result:focus{
+    outline: none;
+}
+
+.btn_output{
+    width: 50%;
+    height: 5.5rem;
+    padding: 0.3rem 0.3rem;
+    position: absolute; 
+    bottom: 5rem;  
+    border-radius: 3rem;
+    border: 3px solid #106853;
+    font-size: 2.5rem;
+    color: #09493a;
+    cursor: pointer;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+}
+
+.btn_output:hover{
+    background: #106853;
+    color: #ffffff;
+    font-weight: bold;
+    border: 3px solid #ffffff;
+}
+
+.text-output{
+    position: absolute;
+    width: 80%;
+    height: 25%;
+    bottom: 15rem;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+}
+
+.text-output h3{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.text-output p{
+    font-size: 2rem;
+    margin: 0;
+}
+
+footer{
+    position: relative;
+    left: -4.8rem;
+}
+.redes{
+    position: absolute;
+    display: flex;
+    top: 4rem;
+
+}
+
+
+@media (max-width:641px){
+
+    .input_bottons button{
+        width: 18rem; 
+    }
+} 
+
+@media (max-width:530px){
+
+    .input_bottons button{
+        width: 16rem;
+      
+    }
+
+    .text-output h3{
+        font-size: 3.5rem;
+
+    }
+    
+    .text-output p{
+        font-size: 2rem;
+
+    }
+}  
+
+@media (max-width:448px){
+    .input_nota{
+        width: 80%;
+    }
+
+    .input_nota p{
+        margin-left: 0.2rem;
+        
+    } 
+}
+
+@media (max-width:400px){
+
+    .input_bottons button{
+        width: 13rem;
+        font-size: 2.2rem;
+      
+    }
+
+    .input_nota{
+        width: 100%;
+        left: 2rem;
+    }
+
+    .text-output h3{
+        font-size: 3rem;
+
+    }
+    
+    .text-output p{
+        font-size: 1.5rem;
+
+    }
+} 
+
+@media (max-width:340px){
+
+    .input_bottons button{
+        width: 10rem;
+        height: 4.5rem;
+        font-size: 1.8rem;  
+    }
+
+    .input_nota{
+        width: 100%;
+        left: 0.8rem;
+    }
+
+    .input_nota p{
+        margin-left: 0.2rem;
+        font-size: 1.4rem;
+        
+    }
+
+    .btn_output{
+        height: 4.5rem;
+        font-size: 1.8rem;
+        left: 7.5rem;
+
+    }
+} 
+
+@media (max-width:299px){
+    .input_nota{
+        width: 100%;
+        left: 1.3rem;
+        display: inline-flex;
+    }
+
+    .input_nota p{
+        margin-left: 0.1rem;
+        font-size: 1.1rem;
+        
+    }
+    .input_nota a img{
+         margin-top: -0.1rem;
+    }
+
+    .btn_output{
+     left: 7rem;
+    }
+
+}
+
+
+
+
+
+
+
+

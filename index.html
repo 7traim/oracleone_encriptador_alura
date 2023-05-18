@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/tablet_movil.css" rel="stylesheet" media="screen and (max-width:899px)">
+    <link href="css/desktop.css" rel="stylesheet" media="screen and (min-width:900px)">
+    <link rel="icon" href="img/candado.ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+<body>
+    <main class="container_principal">
+            <section class="container area_input">
+                        <textarea class="text-area" name="text_input" id="valor" placeholder="Ingrese el texto aqui" required></textarea>
+                        <div class="btnpegar">
+                            <button id="pasteButton" style="display: none;">Pegar</button>
+                        </div>
+                    <div class="input_nota">
+                        <a><img src='https://i.postimg.cc/PfgBXnFX/Vector.png' alt='Vector'/></a>
+                        <p id="alerta">Solo letras minúsculas, sin acentos y/o simbolos</p>
+                    </div>
+                    <div class="input_bottons">
+                        <button class="btn-input" id="btnEnc" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="btn-input" id="btnDes" onclick="btnDesencriptar()">Desencriptar</button>
+                    </div>
+            </section>
+
+            <section class="container area_output">
+                <article class="text-output" id="textinfo">
+                    <h3>Ningun mensaje fue encontrado</h3>
+                    <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                </article>
+                <article class="text_area_output" id="text_area_result">
+                    <textarea class="text-result" id="valorout" cols="30" rows="10" disabled></textarea>
+                </article>
+                <button class="btn_output" id="paste" onclick="paste()">Copiar</button>      
+            </section>
+            
+    </main>
+    <script src="js/encriptador.js" ></script>
+    <footer>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/dayannig/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="45" height="45"
+                viewBox="0,0,256,256"
+                style="fill:#000000;">
+                <g fill="#39ac92" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM10.496,8.403c0.842,0 1.403,0.561 1.403,1.309c0,0.748 -0.561,1.309 -1.496,1.309c-0.842,0.001 -1.403,-0.561 -1.403,-1.309c0,-0.748 0.561,-1.309 1.496,-1.309zM12,20h-3v-8h3zM22,20h-2.824v-4.372c0,-1.209 -0.753,-1.488 -1.035,-1.488c-0.282,0 -1.224,0.186 -1.224,1.488c0,0.186 0,4.372 0,4.372h-2.917v-8h2.918v1.116c0.376,-0.651 1.129,-1.116 2.541,-1.116c1.412,0 2.541,1.116 2.541,3.628z"></path></g></g>
+                </svg>
+            </a>
+
+            <a href="https://github.com/7traim" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="45" height="45"
+viewBox="0,0,256,256"
+style="fill:#000000;">
+<g fill="#39ac92" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M10.9,2.1c-4.6,0.5 -8.3,4.2 -8.8,8.7c-0.5,4.7 2.2,8.9 6.3,10.5c0.3,0.1 0.6,-0.1 0.6,-0.5v-1.6c0,0 -0.4,0.1 -0.9,0.1c-1.4,0 -2,-1.2 -2.1,-1.9c-0.1,-0.4 -0.3,-0.7 -0.6,-1c-0.3,-0.1 -0.4,-0.1 -0.4,-0.2c0,-0.2 0.3,-0.2 0.4,-0.2c0.6,0 1.1,0.7 1.3,1c0.5,0.8 1.1,1 1.4,1c0.4,0 0.7,-0.1 0.9,-0.2c0.1,-0.7 0.4,-1.4 1,-1.8c-2.3,-0.5 -4,-1.8 -4,-4c0,-1.1 0.5,-2.2 1.2,-3c-0.1,-0.2 -0.2,-0.7 -0.2,-1.4c0,-0.4 0,-1 0.3,-1.6c0,0 1.4,0 2.8,1.3c0.5,-0.2 1.2,-0.3 1.9,-0.3c0.7,0 1.4,0.1 2,0.3c1.3,-1.3 2.8,-1.3 2.8,-1.3c0.2,0.6 0.2,1.2 0.2,1.6c0,0.8 -0.1,1.2 -0.2,1.4c0.7,0.8 1.2,1.8 1.2,3c0,2.2 -1.7,3.5 -4,4c0.6,0.5 1,1.4 1,2.3v2.6c0,0.3 0.3,0.6 0.7,0.5c3.7,-1.5 6.3,-5.1 6.3,-9.3c0,-6 -5.1,-10.7 -11.1,-10z"></path></g></g>
+</svg>
+            </a>
+
+        </div>
+      
+
+    </footer>
+    
+</body>
+</html>
