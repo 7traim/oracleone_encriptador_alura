@@ -56,8 +56,9 @@ u  | ufat
 > ![](https://github.com/7traim/imagenes/blob/main/paleta_encriptador.png)
 
 **Mensaje secreto entregado por el equipo de Alura Latam**
-(fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!)
-felicidades por enfrentar este desafio y haberlo concluido con exito!
+- (fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!)
+- felicidades por enfrentar este desafio y haberlo concluido con exito!
+
 
 
 ### End
